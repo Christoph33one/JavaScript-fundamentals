@@ -113,4 +113,28 @@ console.log(BMIMark, BMIJohn, markHigherBMI);
 */
 
 
-// Strings
+// Strings & tempate literals
+const firstName = "Chris";
+const job = 'Student';
+const birthYear = 1988;
+const year = 2037;
+
+const chris = "I'm " + firstName + ', a  ' + (year - birthYear) + 'years old' + job + '!';
+console.log(chris);
+
+// Tempate literals ES6
+const chrisNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(chrisNew);
+
+// Use back ticks in logs
+console.log(`Just a regular string....`)
+
+// Multiple lines in logs
+console.log('String with \n\
+multiple \n\
+lines');
+
+// Use back ticks in logs ES6 for multiple lines
+console.log(`string
+multiple
+lines`);
