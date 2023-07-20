@@ -94,10 +94,11 @@ console.log(now - 1991 > now - 2018);
 let x, y;
 x = y = 25 - 10 - 5; // x = y = 10
 console.log(x, y);
-*/
 
-// Coding challenge
+
+// JAVASCRIPT CHALLENGE 1
 // Use formular to work out BMI's
+
 const massMark = 78;
 const heightMark = 1.69;
 
@@ -109,4 +110,7 @@ const BMIJohn = massJohn / (massJohn * heightMark);
 // Compare if mark is higher than John
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
+*/
 
+
+// Strings
