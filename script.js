@@ -174,7 +174,7 @@ if (birthYear <= 2000) {
     cenrty = 21;
 }
 console.log(cenrty);
-*/
+
 
 
 // JAVASCRIPT CHALLENGE 2
@@ -199,4 +199,4 @@ if (BMIMark > BMIJohn) {
 } else {
     console.log(`Jonh's BMI ${BMIJohn}) is higher than Mark's!`)
 }
-
+*/
