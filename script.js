@@ -9,7 +9,6 @@ console.log(firstName);
 
 let chris_brown = "singer";
 let $function = 27;
-
 let person = "Chris Brown"
 
 Data types Interger, number & string
@@ -29,8 +28,8 @@ console.log(typeof year);
 // Dynamtic typing to update year as a number
 year = 1991;
 console.log(year);
-
 console.log(null);
+
 
 
 // Declare varibales
@@ -47,6 +46,7 @@ var job = "programmer";
 job = "teacher"
 
 
+
 // Basic operators
 // Math operators
 const ageChris = 2027 - 1991;
@@ -57,16 +57,15 @@ const now = 2027
 const ageMike = now - 1991;
 const agePeter = now - 2018;
 console.log(ageMike, agePeter);
-
 console.log(ageMike * 2, agePeter / 10, 2 ** 3)
 
 const firstName = 'Chris';
 const lastName = 'Brown';
 console.log(firstName + ' ' + lastName);
-
-
 let x = 10 + 5;
 console.log(x);
+
+
 
 // Assingment operators
 z += 10; // z = x + 10 = 25
@@ -85,6 +84,8 @@ console.log(ageChris, ageVika);
 console.log(ageChris > ageVika); // >, <, >=, <=
 console.log(ageChris >= 18);
 
+
+
 // Operator procedance
 const now = 2027
 const ageChris = 2027 - 1991;
@@ -101,16 +102,21 @@ console.log(x, y);
 
 const massMark = 78;
 const heightMark = 1.69;
-
 const massJohn = 92;
 const heightJonh = 1.95;
 
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
 const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (massJohn * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
 // Compare if mark is higher than John
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
-*/
+
 
 
 // Strings & tempate literals
@@ -138,3 +144,59 @@ lines');
 console.log(`string
 multiple
 lines`);
+
+
+
+// if statements
+const age = 19;
+const isOldEnough = age >= 18;
+
+if (isOldEnough) {
+    console.log('chris can start driving ');
+}
+
+const ages = 15;
+const isMuchOldEnough = ages >= 18;
+
+if (ages >= 18) {
+    console.log('chris can start driving ');
+} else {
+    const yearsLeft = 18 - ages;
+    console.log(`chris is to young, wait ${yearsLeft} more years :`)
+}
+
+const birthYear = 2012;
+// Delcare centry varible outside the code block.
+let cenrty
+if (birthYear <= 2000) {
+    cenrty = 20;
+} else {
+    cenrty = 21;
+}
+console.log(cenrty);
+*/
+
+
+// JAVASCRIPT CHALLENGE 2
+// Use if statment to log who's BMI is higher
+// Use template literals to log BMI data
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+// const massMark = 95;
+// const heightMark = 1.88;
+// const massJohn = 85;
+// const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's!`)
+} else {
+    console.log(`Jonh's BMI ${BMIJohn}) is higher than Mark's!`)
+}
+
