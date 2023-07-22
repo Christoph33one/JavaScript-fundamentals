@@ -290,35 +290,36 @@ if (hasDriversLicense && hasGoodVision && !isTired) { // NOT tired
 } else {
     console.log(' Someone else should drive!') // True
 }
+*/
 
 
 // JAVASCRIPT CHALLENGE 3
-// const scoreDolphins = (96 + 108 + 89) / 3; // (addition sum runs first ())
-// const scoreKoalas = (88 + 91 + 110) / 3;
+const scoreDolphins = (96 + 108 + 89) / 3; // (addition sum runs first ())
+const scoreKoalas = (88 + 91 + 110) / 3;
 
-// console.log(scoreDolphins, scoreKoalas);
+console.log(scoreDolphins, scoreKoalas);
 
-// if (scoreDolphins > scoreKoalas) {
-//     console.log("Dolphins win the trophy");
-// } else if (scoreDolphins < scoreKoalas) {
-//     console.log("Koalas win the trophy");
-// } else if (scoreDolphins === scoreKoalas) {
-//     console.log("Both win the trophy");
-// } 
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy");
+} else if (scoreDolphins < scoreKoalas) {
+    console.log("Koalas win the trophy");
+} else if (scoreDolphins === scoreKoalas) {
+    console.log("Both win the trophy");
+} 
 
-// Bonus 1
-// const scoreDolphins = (97 + 112 + 101) / 3; // 
-// const scoreKoalas = (109 + 95 + 123) / 3;
+Bonus 1
+const scoreDolphins = (97 + 112 + 101) / 3; // 
+const scoreKoalas = (109 + 95 + 123) / 3;
 
-// console.log(scoreDolphins, scoreKoalas);
+console.log(scoreDolphins, scoreKoalas);
 
-// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
-//     console.log("Dolphins win the trophy");
-// } else if (scoreDolphins < scoreKoalas) {
-//     console.log("Koalas win the trophy");
-// } else if (scoreDolphins === scoreKoalas) {
-//     console.log("Both win the trophy");
-// } 
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the trophy");
+} else if (scoreDolphins < scoreKoalas) {
+    console.log("Koalas win the trophy");
+} else if (scoreDolphins === scoreKoalas) {
+    console.log("Both win the trophy");
+}
 
 // Bonus 2
 const scoreDolphins = (97 + 112 + 80) / 3; // 
@@ -335,4 +336,3 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 } else {
     console.log("No one wins!")
 }
-*/
