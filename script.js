@@ -199,4 +199,140 @@ if (BMIMark > BMIJohn) {
 } else {
     console.log(`Jonh's BMI ${BMIJohn}) is higher than Mark's!`)
 }
+
+
+// Typle Conversion
+// Converting strings to numbers
+const inputYEAR = '1991';
+console.log(Number(inputYEAR), inputYEAR);
+console.log(Number(inputYEAR) + 18);
+
+console.log(String(23));
+console.log(String(23), 23);
+
+// Typle Coercion
+console.log('I am  ' + 23 + ' years old');
+console.log('I am  ' + '23' + ' years old');
+console.log('23' + '10' - 3);
+console.log('23' * '2');
+
+let n = '1' + 1; // string of '1' = 10
+n = n - 1;
+console.log(n);
+
+
+// Truthy and falsy values
+// 5 falsty values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('chris'));
+console.log(Boolean({}));
+
+const money = 0;
+if (money) {
+    console.log("Don't spend it all");
+} else {
+    console.log("You should get a job!")
+}
+
+let height = 0;
+if (height) {
+    console.log('Yay height is defined');
+} else {
+    console.log('Height is Undefined');
+}
+
+
+// Equality operators
+const age = 18;
+if (age === 18) console.log('You just became an adult (strict)');
+
+if (age == 18) console.log('You just became an adult (loose)');
+
+const favourite = Number(prompt("What's youer favorite number?"));
+console.log(favourite)
+console.log(typeof favourite);
+
+if (favourite === 23) {
+    console.log('Cool! 23 is an amazing number!')
+} else if (favourite === 7) {
+    console.log('7 is also a cool number')
+} else if (favourite === 9) {
+    console.log('9 is also a cool number');
+} else {
+    console.log('Number is not 23 or 7 or 9');
+}
+if (favourite !== 23) console.log('Why not 23?');
+
+
+
+// Boolean logic
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision); // AND
+console.log(hasDriversLicense || hasGoodVision); // OR
+console.log(!hasDriversLicense); // NOT
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log(' Sarah is able to drive!') // True & True
+// } else {
+//     console.log(' Someone else should drive!') // True
+// }
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+// Not tired is False so code logs Someone else should drive!
+if (hasDriversLicense && hasGoodVision && !isTired) { // NOT tired
+    console.log(' Sarah is able to drive!') // True & True
+} else {
+    console.log(' Someone else should drive!') // True
+}
+
+
+// JAVASCRIPT CHALLENGE 3
+// const scoreDolphins = (96 + 108 + 89) / 3; // (addition sum runs first ())
+// const scoreKoalas = (88 + 91 + 110) / 3;
+
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas) {
+//     console.log("Dolphins win the trophy");
+// } else if (scoreDolphins < scoreKoalas) {
+//     console.log("Koalas win the trophy");
+// } else if (scoreDolphins === scoreKoalas) {
+//     console.log("Both win the trophy");
+// } 
+
+// Bonus 1
+// const scoreDolphins = (97 + 112 + 101) / 3; // 
+// const scoreKoalas = (109 + 95 + 123) / 3;
+
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+//     console.log("Dolphins win the trophy");
+// } else if (scoreDolphins < scoreKoalas) {
+//     console.log("Koalas win the trophy");
+// } else if (scoreDolphins === scoreKoalas) {
+//     console.log("Both win the trophy");
+// } 
+
+// Bonus 2
+const scoreDolphins = (97 + 112 + 80) / 3; // 
+const scoreKoalas = (109 + 95 + 50) / 3;
+
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins win the trophy");
+} else if (scoreDolphins > scoreKoalas && scoreKoalas >= 100) {
+    console.log("Koalas win the trophy");
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log("Both win the trophy");
+} else {
+    console.log("No one wins!")
+}
 */
