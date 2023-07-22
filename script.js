@@ -290,39 +290,39 @@ if (hasDriversLicense && hasGoodVision && !isTired) { // NOT tired
 } else {
     console.log(' Someone else should drive!') // True
 }
-*/
+
 
 
 // JAVASCRIPT CHALLENGE 3
-const scoreDolphins = (96 + 108 + 89) / 3; // (addition sum runs first ())
-const scoreKoalas = (88 + 91 + 110) / 3;
+// const scoreDolphins = (96 + 108 + 89) / 3; // (addition sum runs first ())
+// const scoreKoalas = (88 + 91 + 110) / 3;
 
-console.log(scoreDolphins, scoreKoalas);
+// console.log(scoreDolphins, scoreKoalas);
 
-if (scoreDolphins > scoreKoalas) {
-    console.log("Dolphins win the trophy");
-} else if (scoreDolphins < scoreKoalas) {
-    console.log("Koalas win the trophy");
-} else if (scoreDolphins === scoreKoalas) {
-    console.log("Both win the trophy");
-} 
+// if (scoreDolphins > scoreKoalas) {
+//     console.log("Dolphins win the trophy");
+// } else if (scoreDolphins < scoreKoalas) {
+//     console.log("Koalas win the trophy");
+// } else if (scoreDolphins === scoreKoalas) {
+//     console.log("Both win the trophy");
+// }
 
-Bonus 1
-const scoreDolphins = (97 + 112 + 101) / 3; // 
-const scoreKoalas = (109 + 95 + 123) / 3;
+// Bonus 1
+// const scoreDolphins = (97 + 112 + 101) / 3; //
+// const scoreKoalas = (109 + 95 + 123) / 3;
 
-console.log(scoreDolphins, scoreKoalas);
+// console.log(scoreDolphins, scoreKoalas);
 
-if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
-    console.log("Dolphins win the trophy");
-} else if (scoreDolphins < scoreKoalas) {
-    console.log("Koalas win the trophy");
-} else if (scoreDolphins === scoreKoalas) {
-    console.log("Both win the trophy");
-}
+// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+//     console.log("Dolphins win the trophy");
+// } else if (scoreDolphins < scoreKoalas) {
+//     console.log("Koalas win the trophy");
+// } else if (scoreDolphins === scoreKoalas) {
+//     console.log("Both win the trophy");
+// }
 
 // Bonus 2
-const scoreDolphins = (97 + 112 + 80) / 3; // 
+const scoreDolphins = (97 + 112 + 80) / 3; //
 const scoreKoalas = (109 + 95 + 50) / 3;
 
 console.log(scoreDolphins, scoreKoalas);
@@ -336,3 +336,103 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 } else {
     console.log("No one wins!")
 }
+
+
+
+// Switch statement
+// executes the value given to day
+// more readable code woth switch statment
+const day = 'friday';
+
+switch (day) {
+    case 'monday': // day == 'monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory vidoes');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend')
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Go to coding meetup');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Go to coding meetup');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'staurday' || day === 'sunday') {
+    console.log('Enjoy the weekend')
+} else {
+    console.log('Not a valid day!');
+}
+
+
+
+// statments & expressions
+// expressions
+// 3 + 4
+// 1991
+// true && false && !false
+
+// statements
+// if (23 > 10) {
+//     const str = '23 is bigger';
+// }
+
+// me is the expression
+const me = 'Chris'
+console.log(`I'm ${2037 - 1991} years old ${me}`)
+
+
+
+
+// Conditional operator
+// ? ( if statment : else)
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine') :
+//     console.log('I like to code and learn new things');
+
+// Refractored code with ternary operators!
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+console.log(`I like to drink ${age >= 18 ? 'wine'
+    : 'water'}`);
+
+// longer version
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine';
+} else {
+    drink2
+}
+console.log(drink2);
+*/
+
+
+// const bill = 21;
+// const tip = 15;
+// if (bill >= tip) {
+//     console.log(`please tip at ${tip >= 20 ? tip : 'Spend more'}`)
+// }
+
+// JAVASCRIPT CHALLENGE 3
+const bill = 430;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+console.log(`The bill was ${bill}, the tip was ${tip},
+    and the total value ${bill + tip}`);
