@@ -1,0 +1,4 @@
+// JAVASCRIPT FUNDAMENTALS PART 2
+// JAVASCRIPT FUNDAMENTALS PART 2
+// Activate strict mode
+'use strict';

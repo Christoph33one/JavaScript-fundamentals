@@ -1,3 +1,5 @@
+
+// JAVASCRIPT FUNDAMENTALS PART 1
 // Varibales
 // let js = "amazing";
 // console.log(40 + 8 + 23 - 10);
@@ -431,8 +433,9 @@ console.log(drink2);
 //     console.log(`please tip at ${tip >= 20 ? tip : 'Spend more'}`)
 // }
 
-// JAVASCRIPT CHALLENGE 3
-const bill = 430;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
-console.log(`The bill was ${bill}, the tip was ${tip},
-    and the total value ${bill + tip}`);
+// JAVASCRIPT CHALLENGE 4
+// const bill = 430;
+// const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+// console.log(`The bill was ${bill}, the tip was ${tip},
+//     and the total value ${bill + tip}`);
+
