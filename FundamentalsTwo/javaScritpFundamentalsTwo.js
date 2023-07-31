@@ -5,7 +5,7 @@
 // // const interface = 'Audio'
 // // const private = 543;
 /*
-// Functions
+// FUNCTIONS
 
 function logger() {
     console.log("My name is Chris");
@@ -31,9 +31,8 @@ console.log(appleOrangeJuice);
 
 
 
-// Declaring functions & Expressions
-
-//  Declaration
+// DELCARING FUNCTIONS & EXPRESSIONS
+// DECLARATION
 // Function that be used before it's declared
 function calcAge1(birthYear) {
     return 2037 - birthYear;
@@ -43,7 +42,7 @@ const age1 = calcAge1(1991);
 // console.log(age1);
 
 
-// Expression
+// EXPRESSION
 // Essentially a function value stored in a varible
 // Function with out a name = Expression
 // Functions are values which can be stored in a varible!
@@ -55,7 +54,7 @@ console.log(age1, age2);
 
 
 
-// Arrow functions
+// ARROW FUNCTIONS
 // Great for quick one-line functions. But has no (this) keyword
 const calcAge3 = birthYear => 2037 - birthYear;
 const age3 = calcAge3(1991);
@@ -96,8 +95,6 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2, 3));
-
-
 
 // Reviewing functions
 // birthYear = 1991
@@ -179,15 +176,14 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 
 
-// Data structures
-
-// Array operations(Methods)
+// DATA STRUCTURES
+// ARRAY OPERATIONS(METHODS)
 
 const friend1 = 'chris';
 const friend2 = 'vik';
 const friend3 = 'mike';
 
-// Arrays
+// ARRAYS
 // Most comon way to write arrays!
 const friends = ['chris', 'vik', 'mike'];
 console.log(friends);
@@ -200,7 +196,7 @@ console.log(friends);
 // console.log(friends.length); // = 3
 // console.log(friends[friends.length - 1]); // = mike
 
-// mutate and array
+// mutate an array
 friends[2] = 'James';
 console.log(friends); // replaces mike with James!
 
@@ -209,7 +205,7 @@ const jonas = [firstName, 'Brown', 2037 - 1991,
     'teacher', friends];
 console.log(jonas.length);
 
-// Exercise
+// EXRCISE
 const calcAge = function (birthYear) {
     return 2037 - birthYear;
 }
@@ -226,7 +222,7 @@ console.log(ages); // = 46, 70, 19]
 
 
 
-// Array methods
+// ARRAY METHODS
 // Push method
 const friends = ['chris', 'vik', 'mike'];
 // Add elements
@@ -238,7 +234,7 @@ console.log(newLenght);
 friends.unshift('John');
 console.log(friends); // = ['John', 'chris', 'vik', 'mike', 'James']
 
-// Remove elements
+// REMOVE ELEMENTS
 friends.pop();
 const popped = friends.pop(); // = ['John', 'chris', 'vik']
 console.log(popped); // Not used to often!
@@ -250,14 +246,14 @@ console.log(friends); // = ['chris', 'vik']
 console.log(friends.indexOf('vik'));
 console.log(friends.indexOf('bob'));
 
-// ES6 method
+// ES6 METHOD
 friends.push(23);
 console.log(friends.includes('vik')); // = True
 console.log(friends.includes('bob')); // = False
 console.log(friends.includes(23)); // = True
 
 if (friends.includes('vik')) {
-    console.log('You have a friend called Vik!') // = You have a friend called Peter!
+    console.log('You have a friend called Vik!') // = You have a friend called Vik!
 }
 
 
@@ -281,8 +277,8 @@ const calcTip = function (bill) {
     return bill >= 50 && 300 ? bill * 0.15 : bill * 0.2
 }
 // Cleaner way instaed of creating seprate varibles.
-const bills = [125, 555, 44];
+const bills = [125, 555, 44]; // = [18.75, 83.25, 8.8]
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(bills, tips, totals);
+console.log(bills, tips, totals); // = [143.75, 638.25, 52.8]
 */ 
