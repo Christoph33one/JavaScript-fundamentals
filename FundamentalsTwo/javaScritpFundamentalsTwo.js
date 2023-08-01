@@ -259,7 +259,7 @@ if (friends.includes('vik')) {
 
 // ARRAY CHALLENGE 2
 /* Write a function calcTip that takes any bill value
-as an input and returns the corresponding tip, calculated 
+as an input and returns the corresponding tip, calculated
 based on the rules above (you can check out the code from the
 first tip calculator challenge if you need to). Use the function
 type you like the most. Test the function using a bill value of 100.
@@ -267,18 +267,169 @@ type you like the most. Test the function using a bill value of 100.
 2.And now let's use arrays! So, create an array called bills containing
 the test data below.
 
-3.Create an array called tips containing the tip value for each bill, 
+3.Create an array called tips containing the tip value for each bill,
 calculated from the function you created before.
 
-4. BONUS: Create an array totals containing the total values, 
+4. BONUS: Create an array totals containing the total values,
 so the bill + tip.
 
 const calcTip = function (bill) {
     return bill >= 50 && 300 ? bill * 0.15 : bill * 0.2
+    // bill equal or higher than 300 or bill x 0.15 else bill x 0.2
 }
 // Cleaner way instaed of creating seprate varibles.
 const bills = [125, 555, 44]; // = [18.75, 83.25, 8.8]
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals); // = [143.75, 638.25, 52.8]
-*/ 
+
+
+
+
+// OBJECTS
+// Objects have curly braces {} to define a new object
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmenn',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', ' Steven']
+};
+console.log(jonas);
+
+// DOT VS BRACKET NOTATION
+console.log(jonas.lastName); // Dot notation
+console.log(jonas['lastName']); // Bracket notation
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+// console.log(jonas.'last' + nameKey); // Dot notation will not work this way!
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+// Get a property that does not exist as an object from jonas
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request!  Choose between firstName, lastName, age, job, and friends');
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtmann';
+console.log(jonas);
+
+// CHALLENGE
+// "Jonas has 3 friends, and his best friend is called Micheal"
+
+console.log(`${jonas.firstName} has ${jonas.friends.
+    length}, and his best friend is called ${jonas.friends[0]}`)
+
+
+
+// OBJECT METHODS
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmenn',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', ' Steven'],
+    hasDriversLicense: true,
+
+    // This is a function expression(method)
+    // this holds a function value (functions are values!)
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+
+    // Using the (this) keyword to retieve birthyear only
+    // this, pionts to the object jonas and it's key value pairs!
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
+
+    // Another way to use the this keyword to calculate the age and log it to the console
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    // CHALLENGE
+    // "Jonas is a 46-year old teacher, and he has a drivers license"
+    // Jonas is a 46- year old teacher, and he has a drivers license.
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}
+            - year old ${jonas.job}, and he has ${this.
+                hasDriversLicense ? 'a' : 'no'} drivers license.`
+    }
+};
+
+
+console.log(jonas.calcAge());
+// console.log(jonas.calcAge(1991));
+console.log(jonas.age);
+console.log(jonas.getSummary());
+*/
+
+// OBJECTS CHALLENGE 3
+/*
+1. For each of them, create an object with properties 
+for their full name, mass, and height (Mark Miller and 
+John Smith). Name these objects as mark and john, 
+and their properties exactly as fullName, mass and height.
+
+2. Create a calcBMI method on each object to calculate the 
+BMI (the same method on both objects). Assign the BMI value 
+to a property, and also return it from the method.
+
+3.Log to the console who has the higher BMI, 
+together with the full name and the respective BMI. 
+Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    // Method
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+
+}
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    // Method
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+// call the object and then the method
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI 
+    ${mark.bmi} is higher that ${mark.fullName} 
+    ${john.bmi}`);
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI 
+    ${mark.bmi} is higher that ${mark.fullName} 
+    ${john.bmi}`);
+}
+/*Mark Miller's BMI 
+27.309968138370508 is higher that Mark Miller 
+24.194608809993426
+*/
+
