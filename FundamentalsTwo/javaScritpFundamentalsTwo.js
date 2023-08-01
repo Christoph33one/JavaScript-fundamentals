@@ -376,17 +376,17 @@ console.log(jonas.getSummary());
 
 // OBJECTS CHALLENGE 3
 /*
-1. For each of them, create an object with properties 
-for their full name, mass, and height (Mark Miller and 
-John Smith). Name these objects as mark and john, 
+1. For each of them, create an object with properties
+for their full name, mass, and height (Mark Miller and
+John Smith). Name these objects as mark and john,
 and their properties exactly as fullName, mass and height.
 
-2. Create a calcBMI method on each object to calculate the 
-BMI (the same method on both objects). Assign the BMI value 
+2. Create a calcBMI method on each object to calculate the
+BMI (the same method on both objects). Assign the BMI value
 to a property, and also return it from the method.
 
-3.Log to the console who has the higher BMI, 
-together with the full name and the respective BMI. 
+3.Log to the console who has the higher BMI,
+together with the full name and the respective BMI.
 Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
 
 
@@ -420,16 +420,57 @@ john.calcBMI();
 console.log(mark.bmi, john.bmi);
 
 if (mark.bmi > john.bmi) {
-    console.log(`${mark.fullName}'s BMI 
-    ${mark.bmi} is higher that ${mark.fullName} 
+    console.log(`${mark.fullName}'s BMI
+    ${mark.bmi} is higher that ${mark.fullName}
     ${john.bmi}`);
 } else if (john.bmi > mark.bmi) {
-    console.log(`${john.fullName}'s BMI 
-    ${mark.bmi} is higher that ${mark.fullName} 
+    console.log(`${john.fullName}'s BMI
+    ${mark.bmi} is higher that ${mark.fullName}
     ${john.bmi}`);
 }
-/*Mark Miller's BMI 
-27.309968138370508 is higher that Mark Miller 
+/*Mark Miller's BMI
+27.309968138370508 is higher that Mark Miller
 24.194608809993426
+
+
+
+
+// LOOPS
+// ITERATION: THE FOR LOOP
+// console.log('Lifting weights repetition 1');
+
+// For loops keeps running while condition is true!
+for (let rep = 1; rep <= 10; rep++) {
+    // console.log(`Lifting weights repetition 1');
+    console.log(`Lifting weights repetition ${rep}`);
+}
 */
+
+
+// LOOPING ARRAYS, BREAKING AND CONTINUING
+const jonas = [
+    'Jonas',
+    'Schmedtmenn',
+    2073 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', ' Steven'],
+    true
+];
+const types = [];
+// console.log(jonas[0])
+// console.log(jonas[1]) 
+// .. 
+// console.log(jonas[4])
+// (jonas[5]) does not exist!
+
+// Looping an array with the For loop
+for (let i = 0; i < jonas.length; i++) {
+    // reading form jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+    // filling type array
+    // types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
+}
+console.log(types);
 
