@@ -566,7 +566,7 @@ TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
 
 2. Create empty arrays for the tips and the totals (tips and totals)
 
-3. Use the calcTip function we wrote before (included in the starter code) 
+3. Use the calcTip function we wrote before (included in the starter code)
 to calculate tips and total values (bill + tip) for every bill value in the bills array.
 Use a for loop to perform the 10 calculations!
 
@@ -604,7 +604,7 @@ length of the array (because that's the number of elements).
 
 3. Call the function with the totals array.
 
-*/
+
 const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
@@ -631,3 +631,6 @@ const calcAverage = function (arr) {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
+*/
+
+const x = 25;
