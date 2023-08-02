@@ -439,12 +439,16 @@ if (mark.bmi > john.bmi) {
 // ITERATION: THE FOR LOOP
 // console.log('Lifting weights repetition 1');
 
+// COUNTER - let rep = 1 = to print the value
+// CONDITION - rep <= 10 = when to stop the loop
+// INCREASE THE COUNTER rep++ = loop one after another!
 // For loops keeps running while condition is true!
+
 for (let rep = 1; rep <= 10; rep++) {
     // console.log(`Lifting weights repetition 1');
     console.log(`Lifting weights repetition ${rep}`);
 }
-*/
+
 
 
 // LOOPING ARRAYS, BREAKING AND CONTINUING
@@ -458,14 +462,14 @@ const jonas = [
 ];
 const types = [];
 // console.log(jonas[0])
-// console.log(jonas[1]) 
-// .. 
+// console.log(jonas[1])
+// ..
 // console.log(jonas[4])
 // (jonas[5]) does not exist!
 
 // Looping an array with the For loop
 for (let i = 0; i < jonas.length; i++) {
-    // reading form jonas array
+    // reading from jonas array
     console.log(jonas[i], typeof jonas[i]);
 
     // filling type array
@@ -474,3 +478,156 @@ for (let i = 0; i < jonas.length; i++) {
 }
 console.log(types);
 
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+// 2037 - each years array value, then passed the value to the empty ages array
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// CONTINUE AND BREAK
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue;
+    // if element(jonas[i]) is not a string... continue loop
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+    // if element(jonas[i]) is equal to a number... break loop
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
+
+// LOOPING BACKWARDS AND LOOPS IN LOOPS
+const jonas = [
+    'Jonas',
+    'Schmedtmenn',
+    2073 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', ' Steven']
+];
+// 0,1,2,3,4
+// 4,3,2,1,0
+
+// LOOPING BACKWARDS
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(jonas[i]);
+}
+
+//LOOPS IN LOOPS
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`-------------- starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`)
+    };
+}
+
+
+
+// WHILE LOOP
+// can only specify a condition only!
+// You can use a while loop when you do not know the counter
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+    // console.log(`Lifting weights repetition ${rep}`);
+    rep++
+};
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`WHILE: Lifting weights repetition ${rep}`);
+}
+
+// To get a random number - Math.trunc(Math.random()
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end!')
+}
+*/
+
+// LOOPS CHALLENGE 4
+/*
+1. Create an array called bills containing all 10 test bill values.
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+
+2. Create empty arrays for the tips and the totals (tips and totals)
+
+3. Use the calcTip function we wrote before (included in the starter code) 
+to calculate tips and total values (bill + tip) for every bill value in the bills array.
+Use a for loop to perform the 10 calculations!
+
+*/
+// const calcTip = function (bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//     const tip = calcTip(bills[i]);
+//     tips.push(tip);
+//     totals.push(tip + bills[i]);
+// }
+// console.log(bills, tips, totals);
+
+//BOUNS CHALLENGE
+/*
+Write a function calcAverage which takes an array called arr as an argument.
+This function calculates the average of all numbers in the given array. 
+This is a DIFFICULT challenge (we haven't done this before)! 
+Here is how to solve it if you feel like it:
+
+1. 
+First, you will need to add up all values in the array. 
+To do the addition, start by creating a variable sum that starts at 0. 
+Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. 
+This way, by the end of the loop, you have all values added together.
+
+2. To calculate the average, divide the sum you calculated before by the 
+length of the array (because that's the number of elements).
+
+3. Call the function with the totals array.
+
+*/
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0; // 1.
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i]; // 2.
+        sum += arr[i]; // short hand version
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
